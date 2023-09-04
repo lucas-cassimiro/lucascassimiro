@@ -22,13 +22,15 @@ export default function EmailCopied() {
   return (
     <>
       <button
-        className="absolute w-full opacity-0 hover:opacity-100 hover:bg-slate-300 transition-all ease-linear text-black"
+        className="absolute w-full opacity-0 hover:opacity-100 hover:bg-slate-300 transition-all ease-linear text-[#fff7df]"
         onClick={copyTextToClipboard}
       >
         {!copied ? "Click to copy!" : "Copied!"}
       </button>
-      <MdEmail size="1.5rem" />
-      <span ref={textRef}>lucascassimiro545@hotmail.com</span>
+      <div className="flex gap-2 text-[#fff7df]">
+        <MdEmail size="1.5rem" />
+        <span ref={textRef}>lucascassimiro545@hotmail.com</span>
+      </div>
     </>
   );
 }

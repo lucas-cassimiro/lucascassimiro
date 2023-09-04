@@ -10,12 +10,13 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ["var(--fonts-poppins)"],
-        sans: ["var(--font-poppins)"]
+        sans: ["var(--font-poppins)"],
       },
-      transitionProperty: {
-        width: "width"
-      }
-
+      screens: {
+        "2xl": { max: "921px" },
+        "3xl": { min: "921px" },
+        md: { max: "720px" },
+      },
     },
   },
   plugins: [],

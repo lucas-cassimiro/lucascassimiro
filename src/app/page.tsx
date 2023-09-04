@@ -6,7 +6,10 @@ import {
   BsGithub,
 } from "react-icons/bs";
 
-import { AiOutlineCloudDownload } from "react-icons/ai";
+import { AiOutlineCloudDownload, AiOutlineClose } from "react-icons/ai";
+
+import { FiMenu } from "react-icons/fi";
+
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaUserAlt, FaReact, FaSass, FaTools } from "react-icons/fa";
 
@@ -22,7 +25,7 @@ import { IoLogoHtml5, IoLogoNodejs } from "react-icons/io";
 
 import { TypeAnimation } from "react-type-animation";
 
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 
@@ -36,41 +39,54 @@ import Tooltip from "@/components/Tooltip";
 import SmartStore from "../assets/smartstore.gif";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="w-full">
-      <div className="p-6 flex justify-between h-16 bg-[#4B0082] w-full fixed z-10">
-        <div className="flex gap-10 justify-end w-[680px]">
-          <div className="flex gap-1 ml-20 text-[#fff7df]">
-            <div className="relative flex">
-              <EmailCopied />
-            </div>
+      <div className="p-6 flex justify-between h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:z-0 md:bg-[#9370DB]">
+        <div className="flex gap-10 justify-end w-[500px]">
+          <div className="relative flex">
+            <EmailCopied />
           </div>
-          <button className="text-white">
-            <div className="flex items-center gap-2">
-              Download CV
-              <AiOutlineCloudDownload size="1.5rem" />
-            </div>
-          </button>
         </div>
-        <div className="flex gap-9">
-          <SmoothScroolLink to="#section1">
-            <div className="flex gap-2 text-[#fff7df]">
-              <FaUserAlt size="1.5rem" />
-              <p>Resume</p>
-            </div>
-          </SmoothScroolLink>
-          <SmoothScroolLink to="#section2">
-            <div className="flex gap-2 text-[#fff7df]">
-              <BsFillFileEarmarkSpreadsheetFill size="1.5rem" />
-              Works
-            </div>
-          </SmoothScroolLink>
-          <SmoothScroolLink to="#section3">
-            <div className="flex gap-2 text-[#fff7df]">
-              <FaTools size="1.5rem" />
-              Skills
-            </div>
-          </SmoothScroolLink>
+        <div className="relative">
+          <button
+            onClick={toggleMenu}
+            className="hidden 2xl:block text-[#fff7df] z-50 opacity-100 absolute right-3"
+          >
+            {!menuOpen ? <FiMenu size="2rem" /> : <AiOutlineClose size="2rem"/>}
+          </button>
+
+          <div
+            className={`gap-9 ${
+              menuOpen
+                ? "flex flex-col items-center justify-center w-[250px] h-screen top-0 right-0 fixed bg-black"
+                : "hidden"
+            } 3xl:flex`}
+          >
+            <SmoothScroolLink to="#section1">
+              <div className="flex gap-2 text-[#fff7df]">
+                <FaUserAlt size="1.5rem" />
+                <p onClick={() => setMenuOpen(false)}>Resume</p>
+              </div>
+            </SmoothScroolLink>
+            <SmoothScroolLink to="#section2">
+              <div className="flex gap-2 text-[#fff7df]">
+                <BsFillFileEarmarkSpreadsheetFill size="1.5rem" />
+                <p onClick={() => setMenuOpen(false)}>Works</p>
+              </div>
+            </SmoothScroolLink>
+            <SmoothScroolLink to="#section3">
+              <div className="flex gap-2 text-[#fff7df]">
+                <FaTools size="1.5rem" />
+                <p onClick={() => setMenuOpen(false)}>Skills</p>
+              </div>
+            </SmoothScroolLink>
+          </div>
         </div>
       </div>
       <div className=" flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[#9370DB]">
@@ -124,7 +140,7 @@ export default function Home() {
                 Context API,Redux e GIT / GitHub.
               </strong>
             </p>
-            <Image src={Avatar} alt="Avatar" className="h-[450px] w-[500px]" />
+            {/* <Image src={Avatar} alt="Avatar" className="h-[450px] w-[500px]" /> */}
           </div>
         </AosAnimate>
       </section>
