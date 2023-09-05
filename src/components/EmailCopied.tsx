@@ -27,9 +27,9 @@ export default function EmailCopied() {
       >
         {!copied ? "Click to copy!" : "Copied!"}
       </button>
-      <div className="flex gap-2 text-[#fff7df]">
+      <div className="flex items-center gap-2 text-[#fff7df]">
         <MdEmail size="1.5rem" />
-        <span ref={textRef}>lucascassimiro545@hotmail.com</span>
+        <span ref={textRef} className="mobile:text-[12px]">lucascassimiro545@hotmail.com</span>
       </div>
     </>
   );

@@ -36,6 +36,8 @@ import EmailCopied from "@/components/EmailCopied";
 import SmoothScroolLink from "@/components/SmoothScrollLink";
 import Tooltip from "@/components/Tooltip";
 
+//import BackgroundImage from "../assets/background-image.jpeg"
+
 import SmartStore from "../assets/smartstore.gif";
 
 export default function Home() {
@@ -47,16 +49,14 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <div className="p-6 flex justify-between h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:z-0 md:bg-[#9370DB]">
-        <div className="flex gap-10 justify-end w-[500px] md:w-[300px]">
-          <div className="relative flex">
-            <EmailCopied />
-          </div>
+      <div className="p-6 flex justify-between items-center h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:z-0 md:bg-[url('../assets/background-image.jpeg')]">
+        <div className="relative ml-48 md:ml-0">
+          <EmailCopied />
         </div>
-        <div className="relative">
+        <div className="relative ">
           <button
             onClick={toggleMenu}
-            className="hidden 2xl:block text-[#fff7df] z-50 opacity-100 absolute right-3"
+            className="hidden 2xl:flex text-[#fff7df] z-50 opacity-100"
           >
             {!menuOpen ? (
               <FiMenu size="2rem" />
@@ -68,7 +68,7 @@ export default function Home() {
           <div
             className={`gap-9 ${
               menuOpen
-                ? "flex flex-col items-center justify-center w-[250px] h-screen top-0 right-0 fixed bg-black"
+                ? "flex flex-col items-center justify-center w-[250px] h-screen top-0 right-0 fixed bg-[#4B0082]"
                 : "hidden"
             } 3xl:flex`}
           >
@@ -93,13 +93,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[#9370DB] md:pl-0 md:pt-0 md:pb-[67px]">
-        <div className="flex flex-col w-[950px] 4xl:p-16">
+      <div className="flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[url('../assets/background-image.jpeg')] bg-cover bg-center md:pl-0 md:pt-0 md:pb-[67px]">
+        <div className="flex flex-col w-[950px]">
           <div>
-            <span className="text-7xl font-semibold 4xl:text-5xl md:text-[20px]">
+            <span className="text-6xl font-medium 4xl:text-5xl md:text-[20px] text-white">
               Welcome,{" "}
             </span>
-            <span className="text-4xl font-medium 4xl:text-3xl md:text-[24px]">
+            <span className="text-4xl font-medium 4xl:text-3xl md:text-[24px] text-white">
               I am
             </span>
           </div>
@@ -118,23 +118,21 @@ export default function Home() {
             wrapper="span"
             speed={10}
             repeat={Infinity}
-            className="text-end text-[4.5rem] 4xl:text-[3.5rem] md:text-[2.5rem]"
+            className="text-end text-[4.5rem] 4xl:text-[3.5rem] md:text-[2.5rem] text-white"
           />
         </div>
       </div>
-      <section className="pl-20 bg-red-400"></section>
-
       <section
         className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df] md:ml-0 lg:h-auto"
         id="section1"
       >
         <AosAnimate>
           <div
-            className="flex items-center mx-20 aos-init aos-animate lg:block"
+            className="flex items-center mx-20 aos-init aos-animate lg:block lg:my-5"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <p className="min-w-[352px] max-w-[1500px] text-xl">
+            <p className="min-w-[320px] max-w-[1500px] text-xl">
               Meu nome é Lucas e estou em busca da minha primeira oportunidade
               como Desenvolvedor Frontend. Sou apaixonado por criar interfaces
               atraentes e intuitivas e busco integrar uma equipe criativa para
@@ -142,7 +140,7 @@ export default function Home() {
               com as tecnologias modernas do mercado, ofereço soluções
               inovadoras e estou em busca de uma oportunidade de crescimento em
               projetos desafiadores. Minhas especialidades são
-              <strong>
+              <strong className="ml-[6px]">
                 Next.JS, React.JS, TypeScript, JavaScript, TailwindCSS, SASS,
                 Context API,Redux e GIT / GitHub.
               </strong>
@@ -206,87 +204,87 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="h-screen mx-20 flex justify-center items-center gap-16 xl:h-auto md:flex-col md:gap-0 md:mx-0 md:p-5"
+        className="h-screen px-20 flex justify-center items-center gap-16 bg-[url('../assets/last-background-image.jpeg')] bg-cover bg-center xl:h-auto md:flex-col md:gap-0 md:px-0 md:p-5"
         id="section3"
       >
         <div className="flex flex-col gap-7 pl-11 md:pl-0">
-          <h1 className="self-center">Skills</h1>
-          <span className="font-medium text-xl md:hidden">
+          <h1 className="self-center text-white">Skills</h1>
+          <span className="font-medium text-xl tablet:hidden text-white">
             *passe o cursor por cima do card para ler*
           </span>
         </div>
         <div
-          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-black p-10 my-7 rounded-lg xl:grid-cols-2 md:mb-[80px]"
+          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-white p-10 my-7 rounded-lg xl:grid-cols-2 md:mb-[80px]"
           data-aos="flip-down"
         >
           <Tooltip text="Next.JS é um framework que podemos utilizar para a criação de sites simples ou até mesmo para criarmos back-end de aplicações. Ele possui algumas características, como os conceitos de server-side rendering (SSR) e static site generation (SSG).">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <TbBrandNextjs size="4rem" />
               <span>Next.JS</span>
             </div>
           </Tooltip>
           <Tooltip text="React.JS é uma biblioteca JavaScript com foco em criar interfaces de usuário de forma componentizada.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <FaReact size="4rem" />
               <span>React</span>
             </div>
           </Tooltip>
           <Tooltip text="TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft que é uma extensão do JavaScript. Ela adiciona recursos avançados ao JavaScript, como a tipagem estática e interfaces, tornando mais fácil detectar e prevenir erros durante a fase de desenvolvimento.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <SiTypescript size="4rem" />
               <span>TypeScript</span>
             </div>
           </Tooltip>
           <Tooltip text="JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <SiJavascript size="4rem" />
               <span>JavaScript</span>
             </div>
           </Tooltip>
           <Tooltip text="Node.JS é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada por eventos.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <IoLogoNodejs size="4rem" />
               <span>Node.JS</span>
             </div>
           </Tooltip>
           <Tooltip text="TailwindCSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas WEB.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <SiTailwindcss size="4rem" />
               <span>TailwindCSS</span>
             </div>
           </Tooltip>
           <Tooltip text="O SASS é um pré-processador CSS que adiciona alguns recursos que não estão disponíveis de forma nativa.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <FaSass size="4rem" />
               <span>SASS</span>
             </div>
           </Tooltip>
           <Tooltip text="GIT é um sistema de controle de versões distribuído, usado para controlar o histórico de alterações de arquivos e principalmente de projetos de desenvolvimento de software. Ele permite mais flexibilidade no fluxo de trabalho, segurança e desempenho.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <BsGit size="4rem" />
               <span>GIT</span>
             </div>
           </Tooltip>
           <Tooltip text="GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o GIT. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <BsGithub size="4rem" />
               <span>GitHub</span>
             </div>
           </Tooltip>
           <Tooltip text="Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade. Funciona com projetos usando: Babel, TypeScript, Node, React, Angular, Vue e muito mais!">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <SiJest size="4rem" />
               <span>Jest</span>
             </div>
           </Tooltip>
           <Tooltip text="Vitest é um framework de teste de unidade para JavaScript.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <SiVitest size="4rem" />
               <span>Vitest</span>
             </div>
           </Tooltip>
           <Tooltip text="O HTML é uma linguagem de marcação que compõe a maior parte das páginas da internet e dos aplicativos online. Um hipertexto é um texto usado para fazer referência a outros textos, enquanto uma linguagem de marcação é composta por uma série de marcações que dizem para os servidores da web qual é o estilo e a estrutura de um documento.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <IoLogoHtml5 size="4rem" />
               <span>HTML5</span>
             </div>
