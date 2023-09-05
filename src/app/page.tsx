@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </div>
       <section
-        className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df] md:ml-0 lg:h-auto"
+        className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df] md:ml-0 "
         id="section1"
       >
         <AosAnimate>
@@ -204,7 +204,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="h-screen px-20 flex justify-center items-center gap-16 bg-[url('../assets/last-background-image.jpeg')] bg-cover bg-center xl:h-auto md:flex-col md:gap-0 md:px-0 md:p-5"
+        className="h-screen px-20 flex justify-center items-center gap-16 bg-[url('../assets/last-background-image.jpeg')] bg-cover bg-center md:flex-col md:gap-0 md:px-0 md:p-5"
         id="section3"
       >
         <div className="flex flex-col gap-7 pl-11 md:pl-0">
