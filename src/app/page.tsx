@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </div>
       <section
-        className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df] md:ml-0 "
+        className="h-screen w-auto flex items-center ml-20 justify-center bg-[url('../assets/mid-background-image.jpeg')] bg-cover bg-center md:ml-0 "
         id="section1"
       >
         <AosAnimate>
@@ -132,7 +132,7 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <p className="min-w-[320px] max-w-[1500px] text-xl">
+            <p className="min-w-[320px] max-w-[1500px] text-xl text-white lg:text-sm mobilinho:text-xs">
               Meu nome é Lucas e estou em busca da minha primeira oportunidade
               como Desenvolvedor Frontend. Sou apaixonado por criar interfaces
               atraentes e intuitivas e busco integrar uma equipe criativa para
