@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="h-screen mx-20 flex justify-center items-center gap-16 xl:h-auto md:mb-[80px] md:flex-col md:gap-0"
+        className="h-screen mx-20 flex justify-center items-center gap-16 xl:h-auto md:flex-col md:gap-0 md:mx-0 md:p-5"
         id="section3"
       >
         <div className="flex flex-col gap-7 pl-11 md:pl-0">
