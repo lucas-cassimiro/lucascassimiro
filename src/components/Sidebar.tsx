@@ -11,7 +11,7 @@ export default function Sidebar() {
             <a
               href="https://www.linkedin.com/in/lucasocassimiro/"
               target="_blank"
-              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0"
+              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0  md:w-auto"
             >
               <BsLinkedin size="2rem" />
               <span className="md:hidden">Linkedin</span>
@@ -21,7 +21,7 @@ export default function Sidebar() {
             <a
               href="https://github.com/lucas-cassimiro"
               target="_blank"
-              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0"
+              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0 md:w-auto"
             >
               <BsGithub size="2rem" />
               <span className="md:hidden">GitHub</span>
@@ -30,7 +30,7 @@ export default function Sidebar() {
           <li>
             <a
               href="#"
-              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0"
+              className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0  md:w-auto"
             >
               <BsWhatsapp size="2rem" />
               <span className="md:hidden">WhatsApp</span>

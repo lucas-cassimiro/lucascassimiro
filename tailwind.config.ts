@@ -15,7 +15,11 @@ module.exports = {
       screens: {
         "2xl": { max: "921px" },
         "3xl": { min: "921px" },
+        "4xl": { max: "1165px" },
         md: { max: "720px" },
+        tablet: { max: "768px" },
+        lg: { max: "1024px" },
+        xl: { max: "1200px" },
       },
     },
   },

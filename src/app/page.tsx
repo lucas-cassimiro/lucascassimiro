@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <div className="p-6 flex justify-between h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:z-0 md:bg-[#9370DB]">
-        <div className="flex gap-10 justify-end w-[500px]">
+        <div className="flex gap-10 justify-end w-[500px] md:w-[300px]">
           <div className="relative flex">
             <EmailCopied />
           </div>
@@ -58,7 +58,11 @@ export default function Home() {
             onClick={toggleMenu}
             className="hidden 2xl:block text-[#fff7df] z-50 opacity-100 absolute right-3"
           >
-            {!menuOpen ? <FiMenu size="2rem" /> : <AiOutlineClose size="2rem"/>}
+            {!menuOpen ? (
+              <FiMenu size="2rem" />
+            ) : (
+              <AiOutlineClose size="2rem" />
+            )}
           </button>
 
           <div
@@ -89,13 +93,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[#9370DB]">
-        <div className="flex flex-col w-[950px]">
+      <div className="flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[#9370DB] md:pl-0 md:pt-0 md:pb-[67px]">
+        <div className="flex flex-col w-[950px] 4xl:p-16">
           <div>
-            <span className="text-7xl font-semibold">Welcome, </span>
-            <span className="text-4xl font-medium">I am</span>
+            <span className="text-7xl font-semibold 4xl:text-5xl md:text-[20px]">
+              Welcome,{" "}
+            </span>
+            <span className="text-4xl font-medium 4xl:text-3xl md:text-[24px]">
+              I am
+            </span>
           </div>
-          <span className=" text-[86px] self-center text-[#4B0082]">
+          <span className=" text-[86px] self-center text-[#4B0082] 4xl:text-[60px] md:text-[40px]">
             Lucas Cassimiro
           </span>
           <TypeAnimation
@@ -109,25 +117,24 @@ export default function Home() {
             ]}
             wrapper="span"
             speed={10}
-            style={{ fontSize: "4.5rem" }}
             repeat={Infinity}
-            className="text-end"
+            className="text-end text-[4.5rem] 4xl:text-[3.5rem] md:text-[2.5rem]"
           />
         </div>
       </div>
       <section className="pl-20 bg-red-400"></section>
 
       <section
-        className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df]"
+        className="h-screen w-auto flex items-center ml-20 justify-center bg-[#fff7df] md:ml-0 lg:h-auto"
         id="section1"
       >
         <AosAnimate>
           <div
-            className="flex items-center mx-20 aos-init aos-animate"
+            className="flex items-center mx-20 aos-init aos-animate lg:block"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <p className="max-w-[1500px] text-xl">
+            <p className="min-w-[352px] max-w-[1500px] text-xl">
               Meu nome é Lucas e estou em busca da minha primeira oportunidade
               como Desenvolvedor Frontend. Sou apaixonado por criar interfaces
               atraentes e intuitivas e busco integrar uma equipe criativa para
@@ -140,12 +147,16 @@ export default function Home() {
                 Context API,Redux e GIT / GitHub.
               </strong>
             </p>
-            {/* <Image src={Avatar} alt="Avatar" className="h-[450px] w-[500px]" /> */}
+            <Image
+              src={Avatar}
+              alt="Avatar"
+              className="h-[450px] w-[500px] lg:self-end lg:mx-auto md:w-[400px] md:h-[350px]  md:mt-4 md:p-8"
+            />
           </div>
         </AosAnimate>
       </section>
-      <section className="h-3/4 pl-20  overflow-hidden" id="section2">
-        <div className="grid grid-cols-2 grid-rows-3 h-full">
+      <section className="h-3/4 pl-20 overflow-hidden md:pl-0" id="section2">
+        <div className="grid grid-cols-2 grid-rows-3 h-full md:grid-cols-1 md:grid-rows-6">
           <div
             className=" p-4 flex items-center justify-center"
             data-aos="fade-right"
@@ -195,87 +206,87 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="h-screen mx-20 flex justify-center items-center gap-16"
+        className="h-screen mx-20 flex justify-center items-center gap-16 xl:h-auto md:mb-[80px] md:flex-col md:gap-0"
         id="section3"
       >
-        <div className="flex flex-col gap-7 pl-11">
+        <div className="flex flex-col gap-7 pl-11 md:pl-0">
           <h1 className="self-center">Skills</h1>
-          <span className="font-medium text-xl">
+          <span className="font-medium text-xl md:hidden">
             *passe o cursor por cima do card para ler*
           </span>
         </div>
         <div
-          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-black p-10 my-7 rounded-lg"
+          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-black p-10 my-7 rounded-lg xl:grid-cols-2 md:mb-[80px]"
           data-aos="flip-down"
         >
           <Tooltip text="Next.JS é um framework que podemos utilizar para a criação de sites simples ou até mesmo para criarmos back-end de aplicações. Ele possui algumas características, como os conceitos de server-side rendering (SSR) e static site generation (SSG).">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <TbBrandNextjs size="4rem" />
               <span>Next.JS</span>
             </div>
           </Tooltip>
           <Tooltip text="React.JS é uma biblioteca JavaScript com foco em criar interfaces de usuário de forma componentizada.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <FaReact size="4rem" />
               <span>React</span>
             </div>
           </Tooltip>
           <Tooltip text="TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft que é uma extensão do JavaScript. Ela adiciona recursos avançados ao JavaScript, como a tipagem estática e interfaces, tornando mais fácil detectar e prevenir erros durante a fase de desenvolvimento.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <SiTypescript size="4rem" />
               <span>TypeScript</span>
             </div>
           </Tooltip>
           <Tooltip text="JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <SiJavascript size="4rem" />
               <span>JavaScript</span>
             </div>
           </Tooltip>
           <Tooltip text="Node.JS é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada por eventos.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <IoLogoNodejs size="4rem" />
               <span>Node.JS</span>
             </div>
           </Tooltip>
           <Tooltip text="TailwindCSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas WEB.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <SiTailwindcss size="4rem" />
               <span>TailwindCSS</span>
             </div>
           </Tooltip>
           <Tooltip text="O SASS é um pré-processador CSS que adiciona alguns recursos que não estão disponíveis de forma nativa.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <FaSass size="4rem" />
               <span>SASS</span>
             </div>
           </Tooltip>
           <Tooltip text="GIT é um sistema de controle de versões distribuído, usado para controlar o histórico de alterações de arquivos e principalmente de projetos de desenvolvimento de software. Ele permite mais flexibilidade no fluxo de trabalho, segurança e desempenho.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <BsGit size="4rem" />
               <span>GIT</span>
             </div>
           </Tooltip>
           <Tooltip text="GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o GIT. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <BsGithub size="4rem" />
               <span>GitHub</span>
             </div>
           </Tooltip>
           <Tooltip text="Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade. Funciona com projetos usando: Babel, TypeScript, Node, React, Angular, Vue e muito mais!">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <SiJest size="4rem" />
               <span>Jest</span>
             </div>
           </Tooltip>
           <Tooltip text="Vitest é um framework de teste de unidade para JavaScript.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <SiVitest size="4rem" />
               <span>Vitest</span>
             </div>
           </Tooltip>
           <Tooltip text="O HTML é uma linguagem de marcação que compõe a maior parte das páginas da internet e dos aplicativos online. Um hipertexto é um texto usado para fazer referência a outros textos, enquanto uma linguagem de marcação é composta por uma série de marcações que dizem para os servidores da web qual é o estilo e a estrutura de um documento.">
-            <div className="flex flex-col items-center cursor-pointer">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default">
               <IoLogoHtml5 size="4rem" />
               <span>HTML5</span>
             </div>
