@@ -29,7 +29,8 @@ export default function Sidebar() {
           </li>
           <li>
             <a
-              href="#"
+              href="https://api.whatsapp.com/send?phone=5513992073643"
+              target="_blank"
               className="w-fit relative px-7 flex items-center gap-8 text-white md:flex-col md:p-0  md:w-auto"
             >
               <BsWhatsapp size="2rem" />
