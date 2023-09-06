@@ -35,7 +35,7 @@ import TypeAnimationn from "@/components/TypeAnimation";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div className="p-6 flex justify-between items-center h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:bg-[url('../assets/background-image.jpeg')]">
         <div className="relative ml-48 md:ml-0">
           <EmailCopied />
@@ -98,7 +98,7 @@ export default function Home() {
         <div className="grid grid-cols-2 grid-rows-3 h-full md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
           <div
             className="p-4 flex flex-col items-center justify-evenly text-white"
-            data-aos="fade-left"
+            data-aos="fade-right"
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Smart Store</h1>
@@ -107,7 +107,7 @@ export default function Home() {
               alt="Projeto Smart Store"
               className="z-20"
             />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               A Smart Store é um projeto de e-commerce que conta com um design
               moderno e intuitivo, visando uma ótima experiência do usuário.
               Fácil de mexer, o projeto conta com funcionalidades como:
@@ -138,7 +138,7 @@ export default function Home() {
               Food Commerce
             </h1>
             <Image src={FoodCommerce} alt="Food commerce" />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               O projeto Food Commerce é um sistema de aplicativo de comida
               online. O projeto conta com um design moderno e intuitivo, visando
               uma ótima experiência do usuário. O projeto foi desenvolvido com
@@ -167,7 +167,7 @@ export default function Home() {
               Portfólio Lucas
             </h1>
             <Image src={Portfolio} alt="Portfolio" />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Esse é o meu projeto de Portfólio, sem dúvidas um dos projetos
               mais bonitos que eu já desenvolvi e juntando as tecnologias mais
               modernas que temos hoje no mercado, por assim dizer: Next.JS,
@@ -190,7 +190,7 @@ export default function Home() {
           >
             <h1 className="font-medium desktopLittle:text-2xl">Snapclima</h1>
             <Image src={Snapclima} alt="Snapclima" />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Snapclima é um projeto de previsão do tempo, que consiste em pedir
               a autorização do usuário para acessar sua localização atual e
               trazer os dados da cidade do usuário, também podemos acessar
@@ -216,7 +216,7 @@ export default function Home() {
           >
             <h1 className="font-medium desktopLittle:text-2xl">GitHub</h1>
             <Image src={Github} alt="GitHub" />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Este projeto é o resultado de um desafio do módulo de JavaScript
               avançado proposto pelo curso de desenvolvimento front-end
               DevQuest. Ele consiste em um campo de busca no qual deve ser
@@ -237,7 +237,7 @@ export default function Home() {
           >
             <h1 className="font-medium desktopLittle:text-2xl">Agência XYZ</h1>
             <Image src={AgenciaXYZ} alt="Agência XYZ" />
-            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               A Agência XYZ é uma landing page de agência de modelo.
             </span>
             <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
@@ -252,13 +252,13 @@ export default function Home() {
         id="section3"
       >
         <div className="flex flex-col gap-7 pl-11 md:pl-0">
-          <h1 className="self-center text-white md:text-2xl md:mt-3">Skills</h1>
+          <h1 className="self-center text-white md:text-2xl md:mt-10">Skills</h1>
           <span className="font-medium text-xl tablet:hidden text-white">
             *passe o cursor por cima do card para ler*
           </span>
         </div>
         <div
-          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-white p-10 rounded-lg xl:grid-cols-2 md:mb-[90px] md:p-5 md:gap-6"
+          className="grid grid-cols-4 grid-rows-3 gap-10 border-4 border-white p-10 rounded-lg xl:grid-cols-2 md:mb-[110px] md:p-5 md:gap-6"
           data-aos="flip-down"
         >
           <Tooltip text="Next.JS é um framework que podemos utilizar para a criação de sites simples ou até mesmo para criarmos back-end de aplicações. Ele possui algumas características, como os conceitos de server-side rendering (SSR) e static site generation (SSG).">

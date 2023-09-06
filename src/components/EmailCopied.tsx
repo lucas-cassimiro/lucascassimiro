@@ -22,7 +22,8 @@ export default function EmailCopied() {
   return (
     <>
       <button
-        className="absolute w-full opacity-0 hover:opacity-100 hover:bg-slate-300 transition-all ease-linear text-[#fff7df]"
+        className="absolute w-full opacity-0 hover:opacity-[0.85] hover:bg-slate-300 rounded-sm transition-all ease-linear text-black
+        font-medium text-lg"
         onClick={copyTextToClipboard}
       >
         {!copied ? "Click to copy!" : "Copied!"}

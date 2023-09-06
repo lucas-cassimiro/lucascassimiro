@@ -23,7 +23,7 @@ export default function ButtonCV() {
 
   return (
     <button
-      className="text-white fixed bg-black z-[5] right-6 bottom-2"
+      className="text-white fixed bg-[#4B0082] z-[5] right-6 bottom-2 p-3 hover:bg-purple-600 transition-all duration-200 ease-in rounded-lg md:hidden"
       onClick={() => downloadFile(pdf)}
     >
       <div className="flex items-center gap-2">
