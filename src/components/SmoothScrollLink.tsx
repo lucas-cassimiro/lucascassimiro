@@ -7,7 +7,7 @@ interface SmoothScrollLinkProps {
   children: ReactNode;
 }
 
-export default function SmoothScroolLink({
+export default function SmoothScrollLink({
   to,
   children,
 }: SmoothScrollLinkProps) {
@@ -21,5 +21,9 @@ export default function SmoothScroolLink({
     }
   };
 
-  return <a href={to} onClick={handleClick}>{children}</a>
+  return (
+    <a href={to} onClick={handleClick}>
+      {children}
+    </a>
+  );
 }

@@ -1,10 +1,6 @@
-"use client";
-
-import { AiOutlineCloudDownload, AiOutlineClose } from "react-icons/ai";
-import { FiMenu } from "react-icons/fi";
 import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoHtml5, IoLogoNodejs } from "react-icons/io";
-import { FaUserAlt, FaReact, FaSass, FaTools } from "react-icons/fa";
+import { FaReact, FaSass } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiJest,
@@ -13,15 +9,9 @@ import {
   SiJavascript,
   SiCss3,
 } from "react-icons/si";
-import {
-  BsFillFileEarmarkSpreadsheetFill,
-  BsGit,
-  BsGithub,
-} from "react-icons/bs";
+import { BsGit, BsGithub } from "react-icons/bs";
 
-import { TypeAnimation } from "react-type-animation";
-
-import React, { useState } from "react";
+import React from "react";
 
 import Image from "next/image";
 
@@ -29,7 +19,6 @@ import Avatar from "../assets/profile-avatar.png";
 
 import AosAnimate from "@/components/AosAnimate";
 import EmailCopied from "@/components/EmailCopied";
-import SmoothScroolLink from "@/components/SmoothScrollLink";
 import Tooltip from "@/components/Tooltip";
 
 import SmartStore from "../assets/smart-store.png";
@@ -40,67 +29,19 @@ import Github from "../assets/github.png";
 import AgenciaXYZ from "../assets/agencia-xyz.png";
 import StyledComponents from "../assets/styled-components.svg";
 
+import Navigation from "@/components/Navigation";
+
+import TypeAnimationn from "@/components/TypeAnimation";
+
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <div className="w-full">
       <div className="p-6 flex justify-between items-center h-16 bg-[#4B0082] w-full fixed z-10 md:relative md:bg-[url('../assets/background-image.jpeg')]">
         <div className="relative ml-48 md:ml-0">
           <EmailCopied />
         </div>
-        <div className="relative ">
-          <button
-            onClick={toggleMenu}
-            className="hidden 2xl:flex text-[#fff7df] z-50 opacity-100"
-          >
-            <FiMenu size="2rem" />
-          </button>
-
-          <div
-            className={`gap-9 ${
-              menuOpen
-                ? "flex flex-col w-[250px] h-screen top-0 right-0 fixed bg-[#4B0082] z-[9999] opacity-[100] p-6"
-                : "hidden"
-            } 3xl:flex z-[9999] opacity-[100]`}
-          >
-            <button
-              className={`${menuOpen ? "text-white self-end" : "hidden"}`}
-              onClick={toggleMenu}
-            >
-              <AiOutlineClose size="2rem" />
-            </button>
-            <div
-              className={`${
-                menuOpen
-                  ? "flex flex-col my-auto items-center h-40 justify-between"
-                  : "flex gap-10"
-              }`}
-            >
-              <SmoothScroolLink to="#section1">
-                <div className="flex gap-2 text-[#fff7df]">
-                  <FaUserAlt size="1.5rem" />
-                  <p onClick={() => setMenuOpen(false)}>Resume</p>
-                </div>
-              </SmoothScroolLink>
-              <SmoothScroolLink to="#section2">
-                <div className="flex gap-2 text-[#fff7df]">
-                  <BsFillFileEarmarkSpreadsheetFill size="1.5rem" />
-                  <p onClick={() => setMenuOpen(false)}>Works</p>
-                </div>
-              </SmoothScroolLink>
-              <SmoothScroolLink to="#section3">
-                <div className="flex gap-2 text-[#fff7df]">
-                  <FaTools size="1.5rem" />
-                  <p onClick={() => setMenuOpen(false)}>Skills</p>
-                </div>
-              </SmoothScroolLink>
-            </div>
-          </div>
+        <div className="relative">
+          <Navigation />
         </div>
       </div>
       <div className="flex items-center justify-center pt-[67px] pl-20 h-screen flex-wrap bg-[url('../assets/background-image.jpeg')] bg-cover bg-center md:pl-0 md:pt-0 md:pb-[80px]">
@@ -116,20 +57,7 @@ export default function Home() {
           <span className=" text-[86px] self-center text-[#4B0082] 4xl:text-[60px] mobilinho:text-[45px] mobilemax:text-[35px]">
             Lucas Cassimiro
           </span>
-          <TypeAnimation
-            sequence={[
-              "Frontend Developer",
-              1000,
-              "Next.JS Developer",
-              1000,
-              "React Developer",
-              1000,
-            ]}
-            wrapper="span"
-            speed={10}
-            repeat={Infinity}
-            className="text-end text-[4.5rem] 4xl:text-[3.5rem] text-white mobilinho:text-[2.5rem] mobilemax:text-[1.5rem]"
-          />
+          <TypeAnimationn />
         </div>
       </div>
       <section
@@ -164,7 +92,7 @@ export default function Home() {
         </AosAnimate>
       </section>
       <section
-        className="bg-red-500 h-3/4 pl-20 overflow-hidden md:pl-0 border-t-4"
+        className="h-3/4 pl-20 overflow-hidden md:pl-0 border-t-4"
         id="section2"
       >
         <div className="grid grid-cols-2 grid-rows-3 h-full md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
@@ -173,13 +101,13 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">Smart Store</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">Smart Store</h1>
             <Image
               src={SmartStore}
               alt="Projeto Smart Store"
               className="z-20"
             />
-            <span className="w-[430px] text-xl">
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
               A Smart Store é um projeto de e-commerce que conta com um design
               moderno e intuitivo, visando uma ótima experiência do usuário.
               Fácil de mexer, o projeto conta com funcionalidades como:
@@ -189,14 +117,14 @@ export default function Home() {
               salvar as informações da busca por CEP e os itens do carrinho em
               Local Storage.
             </span>
-            <div className="flex items-center gap-8 text-[4rem]">
+            <div className="flex items-center gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
               <SiTypescript />
               <Image
                 src={StyledComponents}
                 alt="Styled components"
-                className="w-[90px] h-[90px]"
+                className="w-[90px] h-[90px] desktopLittle:w-[75px] desktopLittle:h-[75px]"
               />
               <BsGit />
             </div>
@@ -206,22 +134,26 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">Food Commerce</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">
+              Food Commerce
+            </h1>
             <Image src={FoodCommerce} alt="Food commerce" />
-            <span className="w-[430px] text-xl">
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
               O projeto Food Commerce é um sistema de aplicativo de comida
               online. O projeto conta com um design moderno e intuitivo, visando
               uma ótima experiência do usuário. O projeto foi desenvolvido com
-              as ferramentas: ReactJs, TypeScript, Styled-components e Context
-              API. Foi também inteiramente desenvolvido com responsividade.
+              as ferramentas: React.JS, TypeScript, Styled-components e Context
+              API. Foi também inteiramente desenvolvido com responsividade. O
+              projeto conta com a funcionalidade de adicionar itens ao carrinho
+              de compras.
             </span>
-            <div className="flex items-center gap-8 text-[4rem]">
+            <div className="flex items-center gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <FaReact />
               <SiTypescript />
               <Image
                 src={StyledComponents}
                 alt="Styled components"
-                className="w-[90px] h-[90px]"
+                className="w-[90px] h-[90px] desktopLittle:w-[75px] desktopLittle:h-[75px]"
               />
               <BsGit />
             </div>
@@ -231,9 +163,19 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">Portfólio Lucas</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">
+              Portfólio Lucas
+            </h1>
             <Image src={Portfolio} alt="Portfolio" />
-            <div className="flex gap-8 text-[4rem]">
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+              Esse é o meu projeto de Portfólio, sem dúvidas um dos projetos
+              mais bonitos que eu já desenvolvi e juntando as tecnologias mais
+              modernas que temos hoje no mercado, por assim dizer: Next.JS,
+              React, TypeScript e TailwindCSS. Neste projeto eu aproveitei para
+              aprender Tailwind e aprimorar mais ainda os meus conhecimentos em
+              Next.JS.
+            </span>
+            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
               <SiTypescript />
@@ -246,23 +188,22 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">Snapclima</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">Snapclima</h1>
             <Image src={Snapclima} alt="Snapclima" />
-            <span className="w-[430px] text-xl">
-              Snapclima é um projeto de previsão do tempo, ele consiste em pedir
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+              Snapclima é um projeto de previsão do tempo, que consiste em pedir
               a autorização do usuário para acessar sua localização atual e
               trazer os dados da cidade do usuário, também podemos acessar
               através de um campo de busca no qual deve ser inserido o nome da
               cidade cuja previsão do tempo se deseja consultar. Ao clicar no
-              botão Buscar ou na tecla Enter, o sistema faz uma busca
-              utilizando a API do Open Weather API. Também foram feitas
-              validações no campo de input, caso o usuário busque o nome de uma
-              cidade que não existe, será apresentado uma mensagem de erro. E
-              caso o usuário tente validar o campo de input sem que haja
-              qualquer valor nele, aparecerá uma mensagem de erro mostrando que
-              o campo está vazio.
+              botão Buscar ou na tecla Enter, o sistema faz uma busca utilizando
+              a API do Open Weather API. Também foram feitas validações no campo
+              de input, caso o usuário busque o nome de uma cidade que não
+              existe, será apresentado uma mensagem de erro. E caso o usuário
+              tente validar o campo de input sem que haja qualquer valor nele,
+              aparecerá uma mensagem de erro mostrando que o campo está vazio.
             </span>
-            <div className="flex gap-8 text-[4rem]">
+            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <IoLogoHtml5 />
               <SiCss3 />
               <SiJavascript />
@@ -273,17 +214,17 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">GitHub</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">GitHub</h1>
             <Image src={Github} alt="GitHub" />
-            <span className="w-[430px] text-xl">
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
               Este projeto é o resultado de um desafio do módulo de JavaScript
               avançado proposto pelo curso de desenvolvimento front-end
               DevQuest. Ele consiste em um campo de busca no qual deve ser
               inserido o nome do usuário cujo perfil se deseja consultar. Ao
-              clicar no botão Buscar ou na tecla Enter, o sistema faz uma
-              busca utilizando a API do GitHub.
+              clicar no botão Buscar ou na tecla Enter, o sistema faz uma busca
+              utilizando a API do GitHub.
             </span>
-            <div className="flex gap-8 text-[4rem]">
+            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <IoLogoHtml5 />
               <SiCss3 />
               <SiJavascript />
@@ -294,10 +235,12 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium">Agência XYZ</h1>
+            <h1 className="font-medium desktopLittle:text-2xl">Agência XYZ</h1>
             <Image src={AgenciaXYZ} alt="Agência XYZ" />
-            <span>A Agência XYZ é uma landing page de agência de modelo.</span>
-            <div className="flex gap-8 text-[4rem]">
+            <span className="w-[430px] text-xl desktopLittle:text-base p-7 desktopLittle:p-16 tabletLittle:text-xs tabletLittle:p-20">
+              A Agência XYZ é uma landing page de agência de modelo.
+            </span>
+            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <IoLogoHtml5 />
               <SiCss3 />
             </div>

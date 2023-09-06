@@ -16,6 +16,8 @@ module.exports = {
         "2xl": { max: "921px" },
         "3xl": { min: "921px" },
         "4xl": { max: "1165px" },
+        desktopLittle: { max: "1100px"},
+        tabletLittle: { max: "820px"},
         md: { max: "720px" },
         tablet: { max: "768px" },
         mobilinho: {max: "600px"},

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} flex relative`}>
         <Sidebar />
         {children}
-        {/* <ButtonCV /> */}
+        <ButtonCV />
       </body>
     </html>
   );
