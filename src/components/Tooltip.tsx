@@ -14,7 +14,7 @@ export default function Tooltip({ children, text }: TooltipProps) {
     <div
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
-      className="flex relative"
+      className="flex relative xl:block"
     >
       {children}
       {isVisible && (

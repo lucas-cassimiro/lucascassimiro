@@ -19,6 +19,7 @@ module.exports = {
         md: { max: "720px" },
         tablet: { max: "768px" },
         mobilinho: {max: "600px"},
+        mobilemax: { max: "475px" },
         mobile: { max: "410px" },
         lg: { max: "1024px" },
         xl: { max: "1200px" },
