@@ -254,7 +254,7 @@ export default function Home() {
               trazer os dados da cidade do usuário, também podemos acessar
               através de um campo de busca no qual deve ser inserido o nome da
               cidade cuja previsão do tempo se deseja consultar. Ao clicar no
-              botão "Buscar" ou na tecla "Enter", o sistema faz uma busca
+              botão Buscar ou na tecla Enter, o sistema faz uma busca
               utilizando a API do Open Weather API. Também foram feitas
               validações no campo de input, caso o usuário busque o nome de uma
               cidade que não existe, será apresentado uma mensagem de erro. E
@@ -280,7 +280,7 @@ export default function Home() {
               avançado proposto pelo curso de desenvolvimento front-end
               DevQuest. Ele consiste em um campo de busca no qual deve ser
               inserido o nome do usuário cujo perfil se deseja consultar. Ao
-              clicar no botão "Buscar" ou na tecla "Enter", o sistema faz uma
+              clicar no botão Buscar ou na tecla Enter, o sistema faz uma
               busca utilizando a API do GitHub.
             </span>
             <div className="flex gap-8 text-[4rem]">
