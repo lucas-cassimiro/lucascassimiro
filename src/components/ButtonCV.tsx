@@ -5,14 +5,20 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 const pdf = "http://localhost:3000/curriculo.pdf";
 
 export default function ButtonCV() {
-  const downloadFile = (url: string) => {
-    const fileName = url.split("/").pop();
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", fileName!);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
+
+  const downloadFile = (url: any) => {
+    fetch(url).then(response => response.blob()).then(blob =>{
+      const blobURL = window.URL.createObjectURL(new Blob([blob]))
+      const fileName = url.split("/").pop();
+      const aTag = document.createElement("a");
+      aTag.href = blobURL;
+      aTag.setAttribute("download", fileName);
+      document.body.appendChild(aTag);
+      aTag.click();
+      aTag.remove();
+    })
+
+
   };
 
   return (
