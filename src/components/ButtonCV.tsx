@@ -2,10 +2,10 @@
 
 import { AiOutlineCloudDownload } from "react-icons/ai";
 
-const pdf = "http://localhost:3000/curriculo.pdf";
+const pdf = "/curriculo.pdf";
 
 export default function ButtonCV() {
-  async function downloadFile(url: any){
+  const downloadFile = (url: any) => {
     fetch(url)
       .then((response) => response.blob())
       .then((blob) => {
