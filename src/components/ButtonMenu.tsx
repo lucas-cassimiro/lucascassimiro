@@ -12,15 +12,17 @@ export default function ButtonMenu({
 }) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
 
-    const triggerScrollPosition = 200;
+      const triggerScrollPosition = 200;
 
-    if (scrollPosition >= triggerScrollPosition) {
-      closeSidebar();
-    }
-  });
+      if (scrollPosition >= triggerScrollPosition) {
+        closeSidebar();
+      }
+    });
+  }
 
   function closeSidebar() {
     setMenuOpen(false);

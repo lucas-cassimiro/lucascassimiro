@@ -16,15 +16,17 @@ export default function Navigation() {
     setMenuOpen(!menuOpen);
   };
 
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
+   if (typeof window !== "undefined") {
+     window.addEventListener("scroll", () => {
+       const scrollPosition = window.scrollY;
 
-      const triggerScrollPosition = 200;
+       const triggerScrollPosition = 200;
 
-      if (scrollPosition >= triggerScrollPosition) {
-        closeSidebar();
-      }
-    });
+       if (scrollPosition >= triggerScrollPosition) {
+         closeSidebar();
+       }
+     });
+   }
 
     function closeSidebar() {
       setMenuOpen(false);
