@@ -5,7 +5,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 const pdf = "/curriculo.pdf";
 
 export default function ButtonCV() {
-  const downloadFile = (url: any) => {
+  const downloadFile = (url: string) => {
     fetch(url)
       .then((response) => response.blob())
       .then((blob) => {
@@ -13,7 +13,7 @@ export default function ButtonCV() {
         const fileName = url.split("/").pop();
         const aTag = document.createElement("a");
         aTag.href = blobURL;
-        aTag.setAttribute("download", fileName);
+        aTag.setAttribute("download", fileName!);
         document.body.appendChild(aTag);
         aTag.click();
         aTag.remove();

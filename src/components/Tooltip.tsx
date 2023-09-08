@@ -8,7 +8,7 @@ interface TooltipProps {
 }
 
 export default function Tooltip({ children, text }: TooltipProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (
     <div

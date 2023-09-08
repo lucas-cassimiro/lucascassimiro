@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function EmailCopied() {
   const textRef: React.RefObject<HTMLDivElement> = useRef(null);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<boolean>(false);
 
   const copyTextToClipboard = () => {
     const text: string | null = textRef.current?.textContent || null;

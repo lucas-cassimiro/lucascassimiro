@@ -10,7 +10,21 @@ export default function ButtonMenu({
 }: {
   children: React.ReactNode;
 }) {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+
+    const triggerScrollPosition = 200;
+
+    if (scrollPosition >= triggerScrollPosition) {
+      closeSidebar();
+    }
+  });
+
+  function closeSidebar() {
+    setMenuOpen(false);
+  }
 
   return (
     <aside

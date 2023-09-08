@@ -252,7 +252,9 @@ export default function Home() {
         id="section3"
       >
         <div className="flex flex-col gap-7 pl-11 md:pl-0">
-          <h1 className="self-center text-white md:text-2xl md:mt-10">Skills</h1>
+          <h1 className="self-center text-white md:text-2xl md:mt-10">
+            Skills
+          </h1>
           <span className="font-medium text-xl tablet:hidden text-white">
             *passe o cursor por cima do card para ler*
           </span>
