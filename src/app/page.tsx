@@ -187,7 +187,12 @@ export default function Home() {
             <h1 className="font-medium desktopLittle:text-2xl">
               Portfólio Lucas
             </h1>
-            <a className="italic" rel="noopener noreferrer">
+            <a
+              href="https://portfolio-next-react-ts-tailwind-6p2nlk5hb-lucas-cassimiro.vercel.app/"
+              target="_blank"
+              className="italic"
+              rel="noopener noreferrer"
+            >
               Link do projeto
             </a>
             <Image src={Portfolio} alt="Portfolio" />
