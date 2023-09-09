@@ -7,9 +7,12 @@ import {
   SiVitest,
   SiTypescript,
   SiJavascript,
-  SiCss3,
 } from "react-icons/si";
 import { BsGit, BsGithub } from "react-icons/bs";
+
+import { DiCss3, DiHtml5 } from "react-icons/di";
+
+import { BiLogoJavascript } from "react-icons/bi";
 
 import React from "react";
 
@@ -77,10 +80,11 @@ export default function Home() {
               impactar positivamente a experiência do usuário. Sempre atualizado
               com as tecnologias modernas do mercado, ofereço soluções
               inovadoras e estou em busca de uma oportunidade de crescimento em
-              projetos desafiadores. Minhas especialidades são
-              <strong className="ml-[6px]">
-                Next.JS, React.JS, TypeScript, JavaScript, TailwindCSS, SASS,
-                Context API,Redux e GIT / GitHub.
+              projetos desafiadores. Minhas especialidades são:
+              <strong className="ml-[5.5px]">
+                NextJS, ReactJS, TypeScript, JavaScript, TailwindCSS,
+                Styled-components, SASS, NodeJS, Context API, Redux e GIT &
+                GitHub.
               </strong>
             </p>
             <Image
@@ -95,9 +99,9 @@ export default function Home() {
         className="h-3/4 pl-20 overflow-hidden md:pl-0 border-t-4"
         id="section2"
       >
-        <div className="grid grid-cols-2 grid-rows-3 h-full md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
+        <div className="grid grid-cols-2 grid-rows-3 h-full pt-8 md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
@@ -117,7 +121,7 @@ export default function Home() {
               salvar as informações da busca por CEP e os itens do carrinho em
               Local Storage.
             </span>
-            <div className="flex items-center gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+            <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
               <SiTypescript />
@@ -130,7 +134,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
@@ -147,7 +151,7 @@ export default function Home() {
               projeto conta com a funcionalidade de adicionar itens ao carrinho
               de compras.
             </span>
-            <div className="flex items-center gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+            <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <FaReact />
               <SiTypescript />
               <Image
@@ -159,7 +163,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
@@ -175,7 +179,7 @@ export default function Home() {
               aprender Tailwind e aprimorar mais ainda os meus conhecimentos em
               Next.JS.
             </span>
-            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+            <div className="flex gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
               <SiTypescript />
@@ -184,33 +188,29 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Snapclima</h1>
             <Image src={Snapclima} alt="Snapclima" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              Snapclima é um projeto de previsão do tempo, que consiste em pedir
-              a autorização do usuário para acessar sua localização atual e
-              trazer os dados da cidade do usuário, também podemos acessar
+              O Snapclima é um projeto de previsão do tempo, que consiste em
+              pedir a autorização do usuário para acessar sua localização atual
+              e trazer os dados da cidade do usuário, também podemos acessar
               através de um campo de busca no qual deve ser inserido o nome da
               cidade cuja previsão do tempo se deseja consultar. Ao clicar no
               botão Buscar ou na tecla Enter, o sistema faz uma busca utilizando
-              a API do Open Weather API. Também foram feitas validações no campo
-              de input, caso o usuário busque o nome de uma cidade que não
-              existe, será apresentado uma mensagem de erro. E caso o usuário
-              tente validar o campo de input sem que haja qualquer valor nele,
-              aparecerá uma mensagem de erro mostrando que o campo está vazio.
+              a API do Open Weather API.
             </span>
-            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
-              <IoLogoHtml5 />
-              <SiCss3 />
-              <SiJavascript />
+            <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+              <DiHtml5 />
+              <DiCss3 />
+              <BiLogoJavascript />
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
@@ -224,25 +224,27 @@ export default function Home() {
               clicar no botão Buscar ou na tecla Enter, o sistema faz uma busca
               utilizando a API do GitHub.
             </span>
-            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
-              <IoLogoHtml5 />
-              <SiCss3 />
-              <SiJavascript />
+            <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+              <DiHtml5 />
+              <DiCss3 />
+              <BiLogoJavascript />
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center justify-evenly text-white"
+            className="p-4 flex flex-col items-center gap-8 text-white"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Agência XYZ</h1>
             <Image src={AgenciaXYZ} alt="Agência XYZ" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              A Agência XYZ é uma landing page de agência de modelo.
+              A Agência XYZ é uma landing page de agência de modelo, foi
+              desenvolvido com HTML, CSS e layout responsivo. Grid e Flexbox
+              foram utilizados para a estilização deste projeto.
             </span>
-            <div className="flex gap-8 text-[4rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
-              <IoLogoHtml5 />
-              <SiCss3 />
+            <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+              <DiHtml5 />
+              <DiCss3 />
             </div>
           </div>
         </div>

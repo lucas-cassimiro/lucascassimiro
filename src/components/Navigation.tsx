@@ -43,7 +43,7 @@ export default function Navigation() {
       <div
         className={`gap-9 3xl:flex ${
           menuOpen
-            ? "flex flex-col w-[250px] h-screen top-0 right-0 fixed bg-[#4B0082] z-[9999] opacity-[100] p-6"
+            ? "flex flex-col w-[250px] h-screen top-0 right-0 fixed bg-[#4B0082] z-[9999] opacity-[100] p-6 md:w-[180px]"
             : "hidden"
         }`}
       >
