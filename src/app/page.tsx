@@ -32,6 +32,13 @@ import Github from "../assets/github.png";
 import AgenciaXYZ from "../assets/agencia-xyz.png";
 import StyledComponents from "../assets/styled-components.svg";
 
+import SmartStoreMobile from "../assets/smart-store-mobile.png";
+import FoodCommerceMobile from "../assets/food-commerce-mobile.png";
+import PortfolioMobile from "../assets/portfolio-mobile.png";
+import SnapclimaMobile from "../assets/snapclima-mobile.png";
+import GithubMobile from "../assets/github-mobile.png";
+import AgenciaMobile from "../assets/agencia-mobile.png"
+
 import Navigation from "@/components/Navigation";
 
 import TypeAnimationn from "@/components/TypeAnimation";
@@ -114,11 +121,20 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image
-              src={SmartStore}
-              alt="Projeto Smart Store"
-              className="z-20"
-            />
+            <div className="flex relative">
+              <Image
+                src={SmartStore}
+                alt="Projeto Smart Store"
+                className="z-20"
+              />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={SmartStoreMobile}
+                  alt="Smart store"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               A Smart Store é um sistema de e-commerce online que conta com um
               design moderno e intuitivo, visando uma ótima experiência do
@@ -157,7 +173,16 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image src={FoodCommerce} alt="Food commerce" />
+            <div className="flex relative">
+              <Image src={FoodCommerce} alt="Food commerce" />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={FoodCommerceMobile}
+                  alt="Food commerce"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               O projeto Food Commerce é um sistema de aplicativo de comida
               online. O projeto conta com um design moderno e intuitivo, visando
@@ -195,7 +220,16 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image src={Portfolio} alt="Portfolio" />
+            <div className="flex relative">
+              <Image src={Portfolio} alt="Portfolio" />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={PortfolioMobile}
+                  alt="Food commerce"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Este é o meu projeto de Portfólio que está sendo acessado por você
               nesse exato momento. Sem dúvidas, um dos projetos mais bonitos que
@@ -226,7 +260,16 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image src={Snapclima} alt="Snapclima" />
+            <div className="flex relative">
+              <Image src={Snapclima} alt="Snapclima" />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={SnapclimaMobile}
+                  alt="Snapclima"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               O Snapclima é um projeto de previsão do tempo, que consiste em
               pedir a autorização do usuário para acessar sua localização atual
@@ -256,7 +299,16 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image src={Github} alt="GitHub" />
+            <div className="flex relative">
+              <Image src={Github} alt="GitHub" />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={GithubMobile}
+                  alt="GitHub"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Este projeto é o resultado de um desafio do módulo de JavaScript
               avançado proposto pelo curso de desenvolvimento front-end
@@ -285,7 +337,16 @@ export default function Home() {
             >
               Link do projeto
             </a>
-            <Image src={AgenciaXYZ} alt="Agência XYZ" />
+            <div className="flex relative">
+              <Image src={AgenciaXYZ} alt="Agência XYZ" />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={AgenciaMobile}
+                  alt="Agência XYZ"
+                  className="w-1/3 h-auto"
+                />
+              </div>
+            </div>
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               A Agência XYZ é uma landing page de agência de modelo, foi
               desenvolvido com HTML, CSS e layout responsivo. Grid e Flexbox
