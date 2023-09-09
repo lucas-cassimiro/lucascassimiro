@@ -101,20 +101,28 @@ export default function Home() {
       >
         <div className="grid grid-cols-2 grid-rows-3 h-full pt-8 md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
           <div
-            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-4"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Smart Store</h1>
+            <a
+              href="https://smartstore-next-react-ts-76yi-eujjthbuw-lucas-cassimiro.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Link do projeto
+            </a>
             <Image
               src={SmartStore}
               alt="Projeto Smart Store"
               className="z-20"
             />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              A Smart Store é um projeto de e-commerce que conta com um design
-              moderno e intuitivo, visando uma ótima experiência do usuário.
-              Fácil de mexer, o projeto conta com funcionalidades como:
+              A Smart Store é um sistema de e-commerce online que conta com um
+              design moderno e intuitivo, visando uma ótima experiência do
+              usuário. Fácil de mexer, o projeto conta com funcionalidades como:
               carrosséis de itens, filtrar de itens por preço, cor,
               armazenamento, ordenação, exibição e busca por nome, carrinho de
               compras e busca por CEP com cálculo automático de frete, além de
@@ -134,13 +142,21 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="p-4 flex flex-col items-center gap-8 text-white mb-3"
+            className="p-4 flex flex-col items-center gap-8 text-white mb-4"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">
               Food Commerce
             </h1>
+            <a
+              href="https://food-commerce-react-830fyzpqr-lucas-cassimiro.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Link do projeto
+            </a>
             <Image src={FoodCommerce} alt="Food commerce" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               O projeto Food Commerce é um sistema de aplicativo de comida
@@ -148,8 +164,9 @@ export default function Home() {
               uma ótima experiência do usuário. O projeto foi desenvolvido com
               as ferramentas: React.JS, TypeScript, Styled-components e Context
               API. Foi também inteiramente desenvolvido com responsividade. O
-              projeto conta com a funcionalidade de adicionar itens ao carrinho
-              de compras.
+              projeto conta com a funcionalidade de salvar produtos ao carrinho
+              de compras e em breve será adicionado validação de formulário e
+              Backend.
             </span>
             <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <FaReact />
@@ -170,14 +187,17 @@ export default function Home() {
             <h1 className="font-medium desktopLittle:text-2xl">
               Portfólio Lucas
             </h1>
+            <a className="italic" rel="noopener noreferrer">
+              Link do projeto
+            </a>
             <Image src={Portfolio} alt="Portfolio" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              Esse é o meu projeto de Portfólio, sem dúvidas um dos projetos
-              mais bonitos que eu já desenvolvi e juntando as tecnologias mais
-              modernas que temos hoje no mercado, por assim dizer: Next.JS,
-              React, TypeScript e TailwindCSS. Neste projeto eu aproveitei para
-              aprender Tailwind e aprimorar mais ainda os meus conhecimentos em
-              Next.JS.
+              Este é o meu projeto de Portfólio que está sendo acessado por você
+              nesse exato momento. Sem dúvidas, um dos projetos mais bonitos que
+              eu já desenvolvi e juntando as tecnologias mais modernas que temos
+              hoje no mercado, por assim dizer: NextJS, ReactJS, TypeScript e
+              TailwindCSS. Neste projeto eu aproveitei para aprender TailwindCSS
+              e aprimorar mais ainda os meus conhecimentos em NextJS.
             </span>
             <div className="flex gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
@@ -193,6 +213,14 @@ export default function Home() {
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Snapclima</h1>
+            <a
+              href="https://lucas-cassimiro.github.io/snapclima/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Link do projeto
+            </a>
             <Image src={Snapclima} alt="Snapclima" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               O Snapclima é um projeto de previsão do tempo, que consiste em
@@ -215,6 +243,14 @@ export default function Home() {
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">GitHub</h1>
+            <a
+              href="https://lucas-cassimiro.github.io/buscando-api-github/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Link do projeto
+            </a>
             <Image src={Github} alt="GitHub" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               Este projeto é o resultado de um desafio do módulo de JavaScript
@@ -236,6 +272,14 @@ export default function Home() {
             data-aos-duration="1500"
           >
             <h1 className="font-medium desktopLittle:text-2xl">Agência XYZ</h1>
+            <a
+              href="https://lucas-cassimiro.github.io/agencia-xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Link do projeto
+            </a>
             <Image src={AgenciaXYZ} alt="Agência XYZ" />
             <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
               A Agência XYZ é uma landing page de agência de modelo, foi
