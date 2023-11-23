@@ -6,11 +6,11 @@ export default function TypeAnimationn() {
   return (
     <TypeAnimation
       sequence={[
+        "Full-stack Developer",
+        1000,
+        "Backend Developer",
+        1000,
         "Frontend Developer",
-        1000,
-        "Next.JS Developer",
-        1000,
-        "React Developer",
         1000,
       ]}
       wrapper="span"
