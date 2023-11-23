@@ -7,18 +7,21 @@ import {
   SiVitest,
   SiTypescript,
   SiJavascript,
+  SiPrisma,
+  SiStrapi,
 } from "react-icons/si";
 import { BsGit, BsGithub } from "react-icons/bs";
 
-import { DiCss3, DiHtml5 } from "react-icons/di";
+import { DiCss3, DiHtml5, DiMongodb } from "react-icons/di";
 
-import { BiLogoJavascript } from "react-icons/bi";
+import { BiLogoJavascript, BiLogoPostgresql } from "react-icons/bi";
 
 import React from "react";
 
 import Image from "next/image";
 
 import Avatar from "../assets/profile-avatar.png";
+import GraphQL from "../assets/graphql.svg";
 
 import AosAnimate from "@/components/AosAnimate";
 import EmailCopied from "@/components/EmailCopied";
@@ -37,11 +40,11 @@ import FoodCommerceMobile from "../assets/food-commerce-mobile.png";
 import PortfolioMobile from "../assets/portfolio-mobile.png";
 import SnapclimaMobile from "../assets/snapclima-mobile.png";
 import GithubMobile from "../assets/github-mobile.png";
-import AgenciaMobile from "../assets/agencia-mobile.png"
+import AgenciaMobile from "../assets/agencia-mobile.png";
 
 import Navigation from "@/components/Navigation";
-
 import TypeAnimationn from "@/components/TypeAnimation";
+
 
 export default function Home() {
   return (
@@ -80,19 +83,22 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <p className="min-w-[320px] max-w-[1500px] text-xl text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
-              Meu nome é Lucas e estou em busca da minha primeira oportunidade
-              como Desenvolvedor Frontend. Sou apaixonado por criar interfaces
-              atraentes e intuitivas e busco integrar uma equipe criativa para
-              impactar positivamente a experiência do usuário. Sempre atualizado
-              com as tecnologias modernas do mercado, ofereço soluções
-              inovadoras e estou em busca de uma oportunidade de crescimento em
-              projetos desafiadores. Minhas especialidades são:
-              <strong className="ml-[5.5px]">
-                NextJS, ReactJS, TypeScript, JavaScript, TailwindCSS,
-                Styled-components, SASS, NodeJS, Context API, Redux e GIT &
-                GitHub.
-              </strong>
+            <p className="min-w-[320px] max-w-[1500px] text-lg text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
+              Sou um profissional versátil com experiência abrangente em
+              diversas linguagens e frameworks, incluindo{" "}
+              <span className="text-lg font-semibold text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
+                NextJS, ReactJS, Typescript, Javascript e NodeJS. Minha
+                expertise se estende a bibliotecas CSS como Styled-components,
+                TailwindCSS, MaterialUI, SASS e NextUI. No âmbito do Back-end,
+                estou familiarizado com PostgreSQL, MySQL, NodeJS, Express,
+                Prisma ORM, APIs Rest, GraphQL, Strapi e MongoDB.
+              </span>{" "}
+              <br />
+              Além das habilidades técnicas, destaco minha aptidão na gestão de
+              equipes, resolução de conflitos e desenvolvimento de
+              relacionamentos interpessoais. Sou um profissional aberto e
+              flexível a mudanças, comprometido com a constante atualização e
+              aprimoramento das minhas habilidades.
             </p>
             <Image
               src={Avatar}
@@ -112,7 +118,10 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">Smart Store</h1>
+            <h1 className="desktopLittle:text-2xl text-2xl">
+              Smart store - Loja online completa
+            </h1>
+            <h3 className="text-xl font-medium">Projeto Full-stack</h3>
             <a
               href="https://smartstore-next-react-ts-76yi-eujjthbuw-lucas-cassimiro.vercel.app/"
               target="_blank"
@@ -135,25 +144,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              A Smart Store é um sistema de e-commerce online que conta com um
-              design moderno e intuitivo, visando uma ótima experiência do
-              usuário. Fácil de mexer, o projeto conta com funcionalidades como:
-              carrosséis de itens, filtrar de itens por preço, cor,
-              armazenamento, ordenação, exibição e busca por nome, carrinho de
-              compras e busca por CEP com cálculo automático de frete, além de
-              salvar as informações da busca por CEP e os itens do carrinho em
-              Local Storage.
-            </span>
             <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
               <SiTypescript />
-              <Image
-                src={StyledComponents}
-                alt="Styled components"
-                className="w-[90px] h-[90px] desktopLittle:w-[75px] desktopLittle:h-[75px]"
-              />
+              <SiTailwindcss />
               <BsGit />
             </div>
           </div>
@@ -162,9 +157,10 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">
-              Food Commerce
+            <h1 className="desktopLittle:text-2xl text-2xl">
+              Food Commerce - Aplicativo de comida
             </h1>
+            <h3 className="text-xl font-medium">Projeto Full-stack</h3>
             <a
               href="https://food-commerce-react-830fyzpqr-lucas-cassimiro.vercel.app/"
               target="_blank"
@@ -183,23 +179,13 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              O projeto Food Commerce é um sistema de aplicativo de comida
-              online. O projeto conta com um design moderno e intuitivo, visando
-              uma ótima experiência do usuário. O projeto foi desenvolvido com
-              as ferramentas: React.JS, TypeScript, Styled-components e Context
-              API. Foi também inteiramente desenvolvido com responsividade. O
-              projeto conta com a funcionalidade de salvar produtos ao carrinho
-              de compras e em breve será adicionado validação de formulário e
-              Backend.
-            </span>
             <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <FaReact />
               <SiTypescript />
               <Image
                 src={StyledComponents}
                 alt="Styled components"
-                className="w-[90px] h-[90px] desktopLittle:w-[75px] desktopLittle:h-[75px]"
+                className="w-[80px] h-[90px] desktopLittle:w-[75px] desktopLittle:h-[75px]"
               />
               <BsGit />
             </div>
@@ -209,9 +195,8 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">
-              Portfólio Lucas
-            </h1>
+            <h1 className="desktopLittle:text-2xl text-2xl">Portfólio Lucas</h1>
+            <h3 className="text-xl font-medium">Projeto Front-end</h3>
             <a
               href="https://portfolio-next-react-ts-tailwind-6p2nlk5hb-lucas-cassimiro.vercel.app/"
               target="_blank"
@@ -230,14 +215,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              Este é o meu projeto de Portfólio que está sendo acessado por você
-              nesse exato momento. Sem dúvidas, um dos projetos mais bonitos que
-              eu já desenvolvi e juntando as tecnologias mais modernas que temos
-              hoje no mercado, por assim dizer: NextJS, ReactJS, TypeScript e
-              TailwindCSS. Neste projeto eu aproveitei para aprender TailwindCSS
-              e aprimorar mais ainda os meus conhecimentos em NextJS.
-            </span>
             <div className="flex gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <TbBrandNextjs />
               <FaReact />
@@ -251,7 +228,8 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">Snapclima</h1>
+            <h1 className="desktopLittle:text-2xl text-2xl">Snapclima</h1>
+            <h3 className="text-xl font-medium">Projeto Front-end</h3>
             <a
               href="https://lucas-cassimiro.github.io/snapclima/"
               target="_blank"
@@ -270,15 +248,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              O Snapclima é um projeto de previsão do tempo, que consiste em
-              pedir a autorização do usuário para acessar sua localização atual
-              e trazer os dados da cidade do usuário, também podemos acessar
-              através de um campo de busca no qual deve ser inserido o nome da
-              cidade cuja previsão do tempo se deseja consultar. Ao clicar no
-              botão Buscar ou na tecla Enter, o sistema faz uma busca utilizando
-              a API do Open Weather API.
-            </span>
             <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <DiHtml5 />
               <DiCss3 />
@@ -290,7 +259,8 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">GitHub</h1>
+            <h1 className="desktopLittle:text-2xl text-2xl">GitHub</h1>
+            <h3 className="text-xl font-medium">Projeto Front-end</h3>
             <a
               href="https://lucas-cassimiro.github.io/buscando-api-github/"
               target="_blank"
@@ -309,14 +279,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              Este projeto é o resultado de um desafio do módulo de JavaScript
-              avançado proposto pelo curso de desenvolvimento front-end
-              DevQuest. Ele consiste em um campo de busca no qual deve ser
-              inserido o nome do usuário cujo perfil se deseja consultar. Ao
-              clicar no botão Buscar ou na tecla Enter, o sistema faz uma busca
-              utilizando a API do GitHub.
-            </span>
             <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <DiHtml5 />
               <DiCss3 />
@@ -328,7 +290,8 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <h1 className="font-medium desktopLittle:text-2xl">Agência XYZ</h1>
+            <h1 className="desktopLittle:text-2xl text-2xl">Agência XYZ</h1>
+            <h3 className="text-xl font-medium">Projeto Front-end</h3>
             <a
               href="https://lucas-cassimiro.github.io/agencia-xyz/"
               target="_blank"
@@ -347,11 +310,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            <span className="w-[430px] text-xl p-7 desktopLittle:text-base desktopLittle:p-16 md:text-[14px]">
-              A Agência XYZ é uma landing page de agência de modelo, foi
-              desenvolvido com HTML, CSS e layout responsivo. Grid e Flexbox
-              foram utilizados para a estilização deste projeto.
-            </span>
             <div className="flex gap-8 text-[3.5rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
               <DiHtml5 />
               <DiCss3 />
@@ -415,6 +373,53 @@ export default function Home() {
               <span className="xl:text-sm">Node.JS</span>
             </div>
           </Tooltip>
+          <Tooltip text="PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
+              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
+                <BiLogoPostgresql />
+              </div>
+              <span className="xl:text-sm">PostgreSQL</span>
+            </div>
+          </Tooltip>
+          <Tooltip text="O Prisma é um ORM (Object-Relational Mapping) que ajuda os desenvolvedores a criar aplicações mais rapidamente e cometer menos erros com um kit de ferramentas de banco de dados opensource, como PostgreSQL e MySQL. Além disso, o Prisma também suporta as seguintes linguagens: Javascript e Typescript.">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
+              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
+                <SiPrisma />
+              </div>
+              <span className="xl:text-sm">Prisma ORM</span>
+            </div>
+          </Tooltip>
+          <Tooltip text="GraphQL é uma linguagem de consulta e ambiente de execução voltada a servidores para as interfaces de programação de aplicações (APIs) cuja prioridade é fornecer exatamente os dados que os clientes solicitam e nada além.">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
+              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
+                <Image
+                  src={GraphQL}
+                  alt="Ícone do GraphQL"
+                  className="w-16 h-16"
+                />
+              </div>
+              <span className="xl:text-sm">GraphQL</span>
+            </div>
+          </Tooltip>
+
+          <Tooltip text="O MongoDB é um banco de dados não-relacional orientado a documentos — ou seja, que não se utiliza de tabelas e colunas pré-definidas, mas armazena documentos em formato JSON, que por sua vez, trazem a definição da própria estrutura.">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
+              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
+                <DiMongodb />
+              </div>
+              <span className="xl:text-sm">MongoDB</span>
+            </div>
+          </Tooltip>
+
+          <Tooltip text="O Strapi é uma ferramenta que visa facilitar a criação de serviços REST através de um painel administrativo totalmente funcional. Desenvolvido em node. js, o Strap.io é open-source e bem simples de se utilizar.">
+            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
+              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
+                <SiStrapi />
+              </div>
+              <span className="xl:text-sm">Strapi</span>
+            </div>
+          </Tooltip>
+
           <Tooltip text="TailwindCSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas WEB.">
             <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
               <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
@@ -453,14 +458,6 @@ export default function Home() {
                 <SiJest />
               </div>
               <span className="xl:text-sm">Jest</span>
-            </div>
-          </Tooltip>
-          <Tooltip text="Vitest é um framework de teste de unidade para JavaScript.">
-            <div className="flex flex-col items-center cursor-pointer tablet:cursor-default text-white">
-              <div className="text-[4rem] xl:text-[2.5rem] md:text-[3rem]">
-                <SiVitest />
-              </div>
-              <span className="xl:text-sm">Vitest</span>
             </div>
           </Tooltip>
           <Tooltip text="O HTML é uma linguagem de marcação que compõe a maior parte das páginas da internet e dos aplicativos online. Um hipertexto é um texto usado para fazer referência a outros textos, enquanto uma linguagem de marcação é composta por uma série de marcações que dizem para os servidores da web qual é o estilo e a estrutura de um documento.">
