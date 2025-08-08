@@ -34,6 +34,7 @@ import Snapclima from "../assets/snapclima.png";
 import Github from "../assets/github.png";
 import AgenciaXYZ from "../assets/agencia-xyz.png";
 import StyledComponents from "../assets/styled-components.svg";
+import NoizeDesktop from '../assets/noize-desktop.png'
 
 import SmartStoreMobile from "../assets/smart-store-mobile.png";
 import FoodCommerceMobile from "../assets/food-commerce-mobile.png";
@@ -41,6 +42,7 @@ import PortfolioMobile from "../assets/portfolio-mobile.png";
 import SnapclimaMobile from "../assets/snapclima-mobile.png";
 import GithubMobile from "../assets/github-mobile.png";
 import AgenciaMobile from "../assets/agencia-mobile.png";
+import NoizeMobile from '../assets/noize-mobile.png'
 
 import Navigation from "@/components/Navigation";
 import TypeAnimationn from "@/components/TypeAnimation";
@@ -83,23 +85,11 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <p className="min-w-[320px] max-w-[1500px] text-lg text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
-              Sou um profissional versátil com experiência abrangente em
-              diversas linguagens e frameworks, incluindo{" "}
-              <span className="text-lg font-semibold text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
-                NextJS, ReactJS, Typescript, Javascript e NodeJS. Minha
-                expertise se estende a bibliotecas CSS como Styled-components,
-                TailwindCSS, MaterialUI, SASS e NextUI. No âmbito do Back-end,
-                estou familiarizado com PostgreSQL, MySQL, NodeJS, Express,
-                Prisma ORM, APIs Rest, GraphQL, Strapi e MongoDB.
-              </span>{" "}
-              <br />
-              Além das habilidades técnicas, destaco minha aptidão na gestão de
-              equipes, resolução de conflitos e desenvolvimento de
-              relacionamentos interpessoais. Sou um profissional aberto e
-              flexível a mudanças, comprometido com a constante atualização e
-              aprimoramento das minhas habilidades.
+            <p className="min-w-[320px] max-w-[1500px] text-xl text-white lg:text-sm mobilinho:text-[13px] md:pt-3">
+              Desenvolvedor Full Stack com 3 anos de experiência em <span className="text-green-400 font-semibold">JavaScript/TypeScript</span>, especializado em <span className="text-green-400 font-semibold">Node.js</span> e <span className="text-green-400 font-semibold">React</span>. No frontend, atuo com <span className="text-green-400 font-semibold">React</span> e <span className="text-green-400 font-semibold">Next.js</span>, com forte conhecimento em acessibilidade (a11y), SEO, code splitting, SSR, SSG e otimizações voltadas à experiência do usuário e alta performance em aplicações web modernas. No backend, domino os principais frameworks do ecossistema <span className="text-green-400 font-semibold">Node.js</span> — como <span className="text-green-400 font-semibold">Express</span>, <span className="text-green-400 font-semibold">Fastify</span> e <span className="text-green-400 font-semibold">NestJS</span> — com foco em performance, escalabilidade e boas práticas, como Clean Architecture, DDD, SOLID, testes automatizados e injeção de dependências.
             </p>
+
+
             <Image
               src={Avatar}
               alt="Avatar"
@@ -113,6 +103,45 @@ export default function Home() {
         id="section2"
       >
         <div className="grid grid-cols-2 grid-rows-3 h-full pt-8 md:grid-cols-1 md:grid-rows-6 bg-[url('../assets/bolinha.jpeg')] bg-cover bg-center">
+          <div
+            className="p-4 flex flex-col items-center gap-8 text-white mb-4"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h1 className="desktopLittle:text-2xl text-2xl">
+              NOIZE - Portal de notícia de música
+            </h1>
+            <h3 className="text-xl font-medium">Projeto Full stack</h3>
+            <a
+              href="https://www.noize.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic"
+            >
+              Acessar site
+            </a>
+            <div className="flex relative">
+              <Image
+                src={NoizeDesktop}
+                alt="Projeto Smart Store"
+                className="z-20 w-[780px]"
+              />
+              <div className="h-auto absolute z-30 bottom-0">
+                <Image
+                  src={NoizeMobile}
+                  alt="Smart store"
+                  className="w-1/2 h-auto"
+                />
+              </div>
+            </div>
+            <div className="flex items-center gap-8 text-[3rem] desktopLittle:text-[2.5rem] desktopLittle:gap-5">
+              <TbBrandNextjs />
+              <FaReact />
+              <SiTypescript />
+              <SiTailwindcss />
+              <BsGit />
+            </div>
+          </div>
           <div
             className="p-4 flex flex-col items-center gap-8 text-white mb-4"
             data-aos="fade-right"

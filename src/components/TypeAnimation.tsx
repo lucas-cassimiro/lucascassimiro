@@ -6,7 +6,7 @@ export default function TypeAnimationn() {
   return (
     <TypeAnimation
       sequence={[
-        "Full-stack Developer",
+        "Full stack Developer",
         1000,
         "Backend Developer",
         1000,
